@@ -1,10 +1,15 @@
 import React from 'react';
-import Title from '../components/chart/Title';
+import Header from '../components/chart/Header';
+import Song from '../components/chart/Song';
+import Controls from '../components/chart/Controls';
+import './Chart.css';
 
 const Chart = () => {
   return (
-    <div>
-      <Title />
+    <div className="chart">
+      <Header />
+      <Song />
+      <Controls />
     </div>
   );
 };

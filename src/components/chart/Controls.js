@@ -1,0 +1,80 @@
+import React from 'react';
+import { Slider } from '@material-ui/core';
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  changeTempo,
+  toggleEditMode,
+  togglePlayStop,
+} from '../../store/actions/chartActions';
+import { Icon } from 'semantic-ui-react';
+import './Controls.css';
+
+const Controls = () => {
+  const dispatch = useDispatch();
+  const { tempo, editMode, isPlaying } = useSelector((state) => state.chart);
+
+  return (
+    <div className="control-bar">
+      {editMode ? (
+        <div>
+          <button
+            className="btn"
+            onClick={() => {
+              dispatch(toggleEditMode());
+            }}
+          >
+            <Icon name="check" />
+            Done
+          </button>
+          <button className="btn">
+            <Icon name="add" /> Add measure
+          </button>
+          <button className="btn">
+            <Icon name="minus" />
+            Delete measure
+          </button>
+        </div>
+      ) : (
+        <div className="edit-controls">
+          <div className="button-container">
+            <button
+              className="btn"
+              onClick={() => {
+                dispatch(toggleEditMode());
+              }}
+            >
+              <Icon name="edit" />
+              Edit
+            </button>
+            <button
+              className="btn"
+              onClick={() => {
+                dispatch(togglePlayStop());
+              }}
+            >
+              <Icon name={isPlaying ? 'stop' : 'play'} />
+              {isPlaying ? 'Stop' : 'Play'}
+            </button>
+          </div>
+          <div className="slider-container">
+            <div className="tempo">
+              <h1>{tempo}</h1>
+              <p>bpm</p>
+            </div>
+            <div className="slider">
+              <Slider
+                step={1}
+                value={tempo}
+                onChange={(e, newValue) => {
+                  dispatch(changeTempo(newValue));
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Controls;

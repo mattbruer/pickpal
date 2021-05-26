@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 95vw;
+  height: 65px;
+  margin-top: 10px;
+}
+.title {
+  text-align: center;
+}
+.title-input {
+  height: 40px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.header-left {
+  flex: 1;
+}
+.header-center {
+  display: flex;
+  justify-content: center;
+
+  flex: 2;
+}
+.header-right {
+  flex: 1;
+}

@@ -12,6 +12,8 @@ import reportWebVitals from './reportWebVitals';
 
 import chartReducer from './store/reducers/chartReducer';
 
+import 'semantic-ui-css/semantic.min.css';
+
 const rootReducer = combineReducers({ chart: chartReducer });
 
 export const store = createStore(
