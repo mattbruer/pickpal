@@ -3,17 +3,23 @@ import {
   EDIT_TITLE,
   TOGGLE_EDIT_MODE,
   PLAY_STOP,
+  START_NEW_SONG,
 } from '../actions/chartActions';
 
 const initialState = {
   title: 'untitled',
-  tempo: 120,
-  editMode: true,
+  tempo: 0,
+  editMode: false,
   isPlaying: false,
+  song: [[]],
 };
 
 const chartReducer = (state = initialState, action) => {
   switch (action.type) {
+    case START_NEW_SONG:
+      return {
+        ...initialState,
+      };
     case PLAY_STOP:
       return {
         ...state,

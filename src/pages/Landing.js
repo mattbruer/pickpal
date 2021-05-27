@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { startNewSong } from '../store/actions/chartActions';
 
 const Landing = () => {
+  const dispatch = useDispatch();
+
   return (
     <div>
       <p>Land here</p>
@@ -17,7 +21,7 @@ const Landing = () => {
       >
         <p>You have no songs. Start one? </p>
       </div>
-      <button>
+      <button onClick={() => dispatch(startNewSong())}>
         <Link to="/chart">start new song</Link>
       </button>
     </div>

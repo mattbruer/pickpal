@@ -1,4 +1,5 @@
 import React from 'react';
+import Line from './Line';
 
 const Song = () => {
   return (
@@ -12,7 +13,8 @@ const Song = () => {
         backgroundColor: 'white',
       }}
     >
-      Song
+      song
+      <Line />
     </div>
   );
 };

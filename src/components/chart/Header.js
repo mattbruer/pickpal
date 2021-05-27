@@ -10,7 +10,19 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header-left">
-        <Link to="/">Home</Link>
+        <Link
+          onClick={
+            editMode
+              ? () => {
+                  let save = window.confirm('Save changes?');
+                  alert('please implement this function');
+                }
+              : null
+          }
+          to="/"
+        >
+          Home
+        </Link>
       </div>
       <div className="header-center">
         {editMode ? (
