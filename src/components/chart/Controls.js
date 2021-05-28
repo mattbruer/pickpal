@@ -36,7 +36,11 @@ const Controls = () => {
   ) : (
     <div className="control-bar">
       <div className="btn-container">
-        <button className="btn" onClick={() => dispatch(toggleEditMode())}>
+        <button
+          className="btn"
+          onClick={() => dispatch(toggleEditMode())}
+          disabled={isPlaying}
+        >
           <Icon name="edit" />
           Edit
         </button>

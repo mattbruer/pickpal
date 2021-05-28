@@ -8,12 +8,13 @@ const Song = () => {
         border: '1px solid black',
         height: '1500px',
         width: '90vw',
-
+        padding: '15px',
         marginBottom: '100px',
         backgroundColor: 'white',
       }}
     >
-      song
+      <Line />
+      <Line />
       <Line />
     </div>
   );

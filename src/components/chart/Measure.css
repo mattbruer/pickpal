@@ -1,0 +1,35 @@
+.measure {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+.chord-container {
+  display: flex;
+  height: 3vw;
+  margin-bottom: 0.5vw;
+}
+
+.chord-input {
+  height: 100%;
+  width: 70%;
+  border: none;
+  background-color: white;
+}
+
+.input1,
+.input2 {
+  font-size: 2vw;
+}
+
+.input1 {
+  margin-left: 0.5vw;
+}
+
+.measure-number {
+  font-size: 1.5vw;
+  margin-left: 3px;
+}
+
+.staff {
+  height: 100%;
+}

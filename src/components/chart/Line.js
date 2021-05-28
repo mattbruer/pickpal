@@ -6,6 +6,9 @@ const Line = () => {
   return (
     <div className="line">
       <Measure />
+      <Measure />
+      <Measure />
+      <Measure />
     </div>
   );
 };

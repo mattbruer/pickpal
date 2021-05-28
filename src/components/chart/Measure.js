@@ -1,10 +1,41 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import './Measure.css';
 
 const Measure = () => {
+  const { editMode } = useSelector((state) => state.chart);
   return (
-    <div
-      style={{ height: '80px', width: '25%', border: '1px solid black' }}
-    ></div>
+    <div className="measure">
+      <div className="chord-container">
+        <div className="input1">
+          <input
+            className="chord-input"
+            disabled={!editMode}
+            style={editMode ? { border: '1px solid lightblue' } : null}
+          />
+        </div>
+        <div className="input2">
+          <input
+            className="chord-input"
+            disabled={!editMode}
+            style={editMode ? { border: '1px solid lightblue' } : null}
+          />
+        </div>
+      </div>
+      <div className="staff">
+        <svg width="100%" height="50%">
+          <line x1="0" y1="0" x2="100%" y2="0" stroke="black" />
+          <line x1="0" y1="25%" x2="100%" y2="25%" stroke="black" />
+          <line x1="0" y1="50%" x2="100%" y2="50%" stroke="black" />
+          <line x1="0" y1="75%" x2="100%" y2="75%" stroke="black" />
+          <line x1="0" y1="100%" x2="100%" y2="100%" stroke="black" />
+
+          <line x1="0" y1="0" x2="0" y2="100%" stroke="black" />
+          <line x1="100%" y1="0%" x2="100%" y2="100%" stroke="black" />
+        </svg>
+        <p className="measure-number">#</p>
+      </div>
+    </div>
   );
 };
 

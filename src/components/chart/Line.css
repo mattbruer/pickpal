@@ -1,4 +1,5 @@
 .line {
-  border: 1px solid green;
-  height: 80px;
+  display: flex;
+  height: 12vw;
+  margin-bottom: 2vw;
 }
