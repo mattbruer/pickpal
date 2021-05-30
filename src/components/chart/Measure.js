@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import './Measure.css';
 
-const Measure = () => {
+const Measure = ({ measureNumber }) => {
   const { editMode } = useSelector((state) => state.chart);
+
   return (
     <div className="measure">
       <div className="chord-container">
@@ -22,18 +23,28 @@ const Measure = () => {
           />
         </div>
       </div>
-      <div className="staff">
+      <div
+        id="staff"
+        className="staff"
+        onClick={() => alert(document.getElementById('staff').clientHeight)}
+      >
         <svg width="100%" height="50%">
+          <text style={{ fontSize: '3vw' }} x=".1%" y="45%">
+            2
+          </text>
+
+          <text style={{ fontSize: '3vw' }} x=".1%" y="90%">
+            2
+          </text>
           <line x1="0" y1="0" x2="100%" y2="0" stroke="black" />
           <line x1="0" y1="25%" x2="100%" y2="25%" stroke="black" />
           <line x1="0" y1="50%" x2="100%" y2="50%" stroke="black" />
           <line x1="0" y1="75%" x2="100%" y2="75%" stroke="black" />
           <line x1="0" y1="100%" x2="100%" y2="100%" stroke="black" />
-
           <line x1="0" y1="0" x2="0" y2="100%" stroke="black" />
           <line x1="100%" y1="0%" x2="100%" y2="100%" stroke="black" />
         </svg>
-        <p className="measure-number">#</p>
+        <p className="measure-number">{measureNumber + 1}</p>
       </div>
     </div>
   );

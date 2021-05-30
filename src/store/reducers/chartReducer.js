@@ -11,7 +11,7 @@ const initialState = {
   tempo: 0,
   editMode: false,
   isPlaying: false,
-  song: [[]],
+  song: [[], [], [], []],
 };
 
 const chartReducer = (state = initialState, action) => {

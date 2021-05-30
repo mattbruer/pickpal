@@ -1,7 +1,12 @@
 import React from 'react';
 import Line from './Line';
+import { useSelector } from 'react-redux';
 
 const Song = () => {
+  const { song } = useSelector((state) => state.chart);
+  const lines = [];
+
+  function renderLines(measuresPerLine = 4) {}
   return (
     <div
       style={{
@@ -13,9 +18,7 @@ const Song = () => {
         backgroundColor: 'white',
       }}
     >
-      <Line />
-      <Line />
-      <Line />
+      <Line measures={[0, 3]} />
     </div>
   );
 };
