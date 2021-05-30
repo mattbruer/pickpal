@@ -3,13 +3,13 @@ import Measure from './Measure';
 import { useSelector } from 'react-redux';
 import './Line.css';
 
-const Line = () => {
+const Line = ({ measures, lineNumber }) => {
   const { song } = useSelector((state) => state.chart);
 
   return (
     <div className="line">
-      {song.map((m, index) => (
-        <Measure measureNumber={index} />
+      {measures.map((m, index) => (
+        <Measure measureNumber={index + lineNumber * 4} />
       ))}
     </div>
   );

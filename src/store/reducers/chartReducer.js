@@ -4,6 +4,7 @@ import {
   TOGGLE_EDIT_MODE,
   PLAY_STOP,
   START_NEW_SONG,
+  EDIT_CHORDS,
 } from '../actions/chartActions';
 
 const initialState = {
@@ -11,11 +12,20 @@ const initialState = {
   tempo: 0,
   editMode: false,
   isPlaying: false,
-  song: [[], [], [], []],
+  song: [['G', 'C'], [], [], [], [], ['D', 'A']],
 };
 
 const chartReducer = (state = initialState, action) => {
   switch (action.type) {
+    case EDIT_CHORDS:
+      const { measureNumber, position, chord } = action.payload;
+
+      let newSong = [...state.song];
+      newSong[measureNumber][position] = chord;
+      return {
+        ...state,
+        song: [...newSong],
+      };
     case START_NEW_SONG:
       return {
         ...initialState,
