@@ -36,3 +36,5 @@ const chartReducer = (state = initialState, action) => {
 };
 
 export default chartReducer;
+
+git push - u origin main
