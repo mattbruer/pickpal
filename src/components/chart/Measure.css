@@ -19,17 +19,12 @@
 .input1,
 .input2 {
   font-size: 2vw;
+  
 }
 
 .input1 {
-  margin-left: 3.5vw;
+  margin-left: 2.5vw;
 }
 
-.measure-number {
-  font-size: 1.5vw;
-  margin-left: 3px;
-}
 
-.staff {
-  height: 100%;
-}
+

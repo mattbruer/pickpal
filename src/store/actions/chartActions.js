@@ -4,7 +4,20 @@ export const EDIT_TITLE = 'EDIT_TITLE';
 export const PLAY_STOP = 'PLAY_STOP';
 export const START_NEW_SONG = 'START_NEW_SONG';
 export const EDIT_CHORDS = 'EDIT_CHORDS';
+export const ADD_MEASURE = 'ADD_MEASURE'
+export const DELETE_MEASURE = "DELETE_MEASURE"
 
+export function addMeasure() {
+  return {
+    type: ADD_MEASURE
+  }
+}
+
+export function deleteMeasure() {
+  return {
+    type: DELETE_MEASURE
+  }
+}
 export function editChords(measureNumber, position, chord) {
   return {
     type: EDIT_CHORDS,
