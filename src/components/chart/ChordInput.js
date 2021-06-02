@@ -10,7 +10,7 @@ const ChordInput = ({ measureNumber, position }) => {
             onChange={(e) => {
                 dispatch(editChords(measureNumber, position, e.target.value));
             }}
-            value={song[measureNumber][position]}
+            value={song[measureNumber].chords[position] || null}
             className="chord-input"
             disabled={!editMode}
             style={editMode ? { border: '1px solid lightblue' } : null}
