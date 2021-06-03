@@ -1,22 +1,18 @@
 .modal {
     height:50%;
-    width:50%;
+    width:80%;
     position:fixed;
-    left:25%;
+    left:10%;
     top:25%;
-    background-color: bisque;
+    background-color: seashell;
     border:3px;
     border-style:groove;
     border-color:grey;
-    border-radius: 10px
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px darkslategrey;
 }
 
-.container {
-    margin-top:150px;
-    bottom:100px;
-    position:fixed;
-    height:100%;
-    width:100%;
-    background-color:rgba(173, 216, 230, 0.344);
-    z-index: 1000;
+.hide{
+    display: none
 }
+

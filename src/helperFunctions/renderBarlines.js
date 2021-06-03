@@ -10,7 +10,7 @@ const left = {
     single: <line x1="0" y1="0" x2="0" y2="100%" stroke="black" />,
     double: <>
         <line x1="0" y1="0" x2="0" y2="100%" stroke="black" />
-        <line x1=".9%" y1="0" x2=".9%" y2="100%" stroke="black" />
+        <line x1="1.5%" y1="0" x2="1.5%" y2="100%" stroke="black" />
     </>
 }
 
@@ -20,7 +20,7 @@ const right = {
     double:
         <>
             <line x1="100%" y1="0%" x2="100%" y2="100%" stroke="black" />
-            <line x1="99.1%" y1="0%" x2="99.1%" y2="100%" stroke="black" />
+            <line x1="98.5%" y1="0%" x2="98.5%" y2="100%" stroke="black" />
         </>
 }
 

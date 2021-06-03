@@ -6,7 +6,8 @@ import {
   START_NEW_SONG,
   EDIT_CHORDS,
   ADD_MEASURE,
-  DELETE_MEASURE
+  DELETE_MEASURE,
+  SHOW_MEASURE_MODAL
 } from '../actions/chartActions';
 
 
@@ -15,14 +16,16 @@ const initialState = {
   tempo: 0,
   editMode: false,
   isPlaying: false,
+  measureModal: false,
+  editingMeasure: null,
   song: [
     {
       measureIndex: 0,
       timeSig: [2, 2],
       showTimeSig: true,
-      leftBarline: "startRepeat",
+      leftBarline: "none",
       rightBarline: "single",
-      chords: ["", ""]
+      chords: ["G", "C"]
     }
   ]
 
@@ -30,6 +33,12 @@ const initialState = {
 
 const chartReducer = (state = initialState, action) => {
   switch (action.type) {
+    case SHOW_MEASURE_MODAL:
+      return {
+        ...state,
+        measureModal: action.payload.bool,
+        editingMeasure: action.payload.measureNumber
+      }
     case EDIT_CHORDS:
       const { measureNumber, position, chord } = action.payload;
       const newSong = [...state.song];
@@ -41,9 +50,9 @@ const chartReducer = (state = initialState, action) => {
       {
         timeSig: state.song[state.song.length - 1].timeSig,
         measureIndex: state.song.length,
-        showTimeSig: true,
-        leftBarline: "double",
-        rightBarline: 'double',
+        showTimeSig: false,
+        leftBarline: "single",
+        rightBarline: 'single',
         chords: ["", ""]
 
       }

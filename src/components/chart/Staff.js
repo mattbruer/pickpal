@@ -17,7 +17,7 @@ const Staff = ({ measureNumber }) => {
         return lines;
     }
     return (
-        <div onClick={() => alert(timeSig)} style={{ height: "100%" }}>
+        <div style={{ height: "100%" }}>
 
             <svg width="100%" height="50%">
                 {showTimeSig && timeSignature}

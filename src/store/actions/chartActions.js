@@ -5,8 +5,15 @@ export const PLAY_STOP = 'PLAY_STOP';
 export const START_NEW_SONG = 'START_NEW_SONG';
 export const EDIT_CHORDS = 'EDIT_CHORDS';
 export const ADD_MEASURE = 'ADD_MEASURE'
-export const DELETE_MEASURE = "DELETE_MEASURE"
+export const DELETE_MEASURE = "DELETE_MEASURE";
+export const SHOW_MEASURE_MODAL = 'SHOW_MEASURE_MODAL'
 
+export function showMeasureModal(bool, measureNumber) {
+  return {
+    type: SHOW_MEASURE_MODAL,
+    payload: { bool, measureNumber }
+  }
+}
 export function addMeasure() {
   return {
     type: ADD_MEASURE

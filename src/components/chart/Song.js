@@ -1,11 +1,12 @@
 import React from 'react';
 import Line from './Line';
-import MeasureEditModal from './MeasureEditModal'
+
+
 import { useSelector } from 'react-redux';
 import { renderLines } from '../../helperFunctions/renderLines';
 
 const Song = () => {
-  const { song } = useSelector((state) => state.chart);
+  const { measureModal } = useSelector((state) => state.chart);
   const lines = renderLines();
   return (
     <div
@@ -18,7 +19,7 @@ const Song = () => {
         backgroundColor: 'white',
       }}
     >
-      <MeasureEditModal />
+
       {lines.map((l, i) => (
         <Line measures={lines[i]} lineNumber={i} />
       ))}
