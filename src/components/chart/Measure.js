@@ -6,7 +6,7 @@ import ChordInput from './ChordInput'
 
 import { showMeasureModal } from '../../store/actions/chartActions'
 
-const Measure = ({ measureNumber }) => {
+const Measure = ({ measureNumber, width }) => {
   const { editingMeasure, measureModal } = useSelector(state => state.chart)
   const dispatch = useDispatch();
   return (
@@ -14,7 +14,7 @@ const Measure = ({ measureNumber }) => {
     <div onClick={() => {
       if (!measureModal) dispatch(showMeasureModal(true, measureNumber))
     }
-    } className="measure">
+    } style={{ width: `${width}%` }} className="measure">
 
       <div className="chord-container">
         <div className="input1">

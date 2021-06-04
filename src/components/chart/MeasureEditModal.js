@@ -13,7 +13,7 @@ const MeasureEditModal = () => {
             <div onClick={() => dispatch(showMeasureModal(false, null))} style={{ backgroundColor: 'white', width: '50px', border: '1px solid black' }}>close</div>
             <div>set time Signature</div>
             <div>set barline options on measure {editingMeasure}</div>
-            {editingMeasure !== null && <div><Measure measureNumber={editingMeasure} /></div>}
+            {editingMeasure !== null && <div style={{ margin: "10%" }}><Measure width={90} measureNumber={editingMeasure} /></div>}
 
         </div >
 
