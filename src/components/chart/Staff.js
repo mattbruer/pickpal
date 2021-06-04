@@ -3,11 +3,11 @@ import { useSelector } from 'react-redux'
 import { renderBarlines } from '../../helperFunctions/renderBarlines';
 import { renderTimeSig } from '../../helperFunctions/renderTimeSig';
 
-const Staff = ({ measureNumber }) => {
+const Staff = ({ measureNumber, timeSigSize }) => {
     const { timeSig, showTimeSig, leftBarline, rightBarline } = useSelector(state => state.chart.song[measureNumber])
 
     const barlines = renderBarlines(leftBarline, rightBarline);
-    const timeSignature = renderTimeSig(leftBarline, timeSig);
+    const timeSignature = renderTimeSig(leftBarline, timeSig, timeSigSize);
 
     const renderStaffLines = (spaceBetweenLines = 25) => {
         let lines = []
@@ -26,8 +26,10 @@ const Staff = ({ measureNumber }) => {
                 {barlines.right}
             </svg>
             <p style={{
-                fontSize: "1.5vw",
-                marginLeft: "10px"
+                fontSize: "100%",
+                marginLeft: "40px",
+                marginTop: "3%",
+                marginBottom: "3%"
             }}>{measureNumber + 1}</p>
         </div>
     )

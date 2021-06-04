@@ -1,10 +1,12 @@
 .modal {
-    height:50%;
+    display:flex;
+    flex-direction: column;
+    height:75%;
     width:80%;
     position:fixed;
     left:10%;
-    top:25%;
-    background-color: seashell;
+    top:12.5%;
+    background-color:rgb(193, 236, 244);
     border:3px;
     border-style:groove;
     border-color:grey;
@@ -16,3 +18,57 @@
     display: none
 }
 
+.modalMeasure {
+    flex:8;
+   
+    background-color: white;
+    box-shadow: 10px 5px 5px darkslategrey;
+    margin: 5%;
+    display:flex;
+    border-radius: 5px;
+    border:1px solid grey;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.timeSigButtonContainer{
+    flex:1;
+    display: flex;
+    width: 25%;
+    margin: 5px
+}
+
+.timeBtn{
+    margin: 2px;
+    flex:1
+}
+
+.closeBtn{
+    flex: 1
+}
+
+.barlineBtnContainer{
+    flex:1;
+    display: flex;
+    background-color:rgba(238, 173, 173, 0.543)
+    
+}
+
+.barlineBtn {
+    
+    margin:4px;
+    height: 80%;
+   
+}
+
+.barline-options{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:5px;
+    border: 1px solid grey;
+    border-radius:5px;
+}

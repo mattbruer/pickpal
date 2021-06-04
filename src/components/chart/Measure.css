@@ -6,24 +6,27 @@
 .chord-container {
   display: flex;
   height: 3vw;
-  margin-bottom: 0.5vw;
+  margin-bottom: 4%;
+  
 }
 
 .chord-input {
   height: 100%;
   width: 70%;
-  border: none;
-  background-color: white;
+  border:none;
+    background-color: white;
 }
 
 .input1,
 .input2 {
   font-size: 2vw;
-  
+  flex:1
+ 
 }
 
 .input1 {
-  margin-left: 2.5vw;
+  margin-left: 10%; 
+ 
 }
 
 

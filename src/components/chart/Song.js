@@ -10,7 +10,9 @@ const Song = () => {
   const lines = renderLines();
   return (
     <div
+
       style={{
+
         border: '1px solid black',
         height: '1500px',
         width: '90vw',

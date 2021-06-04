@@ -6,7 +6,8 @@ import {
   toggleEditMode,
   togglePlayStop,
   addMeasure,
-  deleteMeasure
+  deleteMeasure,
+  showMeasureModal
 } from '../../store/actions/chartActions';
 import { Icon } from 'semantic-ui-react';
 import './Controls.css';
@@ -18,7 +19,11 @@ const Controls = () => {
   return editMode ? (
     <div className="control-bar">
       <div className="btn-container">
-        <button className="btn" onClick={() => dispatch(toggleEditMode())}>
+        <button className="btn" onClick={() => {
+          dispatch(toggleEditMode());
+          dispatch(showMeasureModal(false, null))
+        }
+        }>
           <Icon name="check" />
           Done
         </button>
