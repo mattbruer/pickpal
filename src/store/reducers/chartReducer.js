@@ -7,7 +7,8 @@ import {
   EDIT_CHORDS,
   ADD_MEASURE,
   DELETE_MEASURE,
-  SHOW_MEASURE_MODAL
+  SHOW_MEASURE_MODAL,
+  EDIT_TIME_SIG
 } from '../actions/chartActions';
 
 
@@ -33,6 +34,24 @@ const initialState = {
 
 const chartReducer = (state = initialState, action) => {
   switch (action.type) {
+    case EDIT_TIME_SIG:
+      const { measure, timeSig } = action.payload
+      let newTime = [...state.song];
+      newTime[measure].timeSig = timeSig
+      //change till end of song
+      for (let i = 0; i < newTime.length; i++) {
+        if (i > measure) {
+          newTime[i].timeSig = timeSig;
+          newTime[i].showTimeSig = false;
+        }
+      }
+      const cur = newTime[measure].timeSig.toString();
+      const prev = newTime[measure - 1].timeSig.toString() || ""
+      newTime[measure].showTimeSig = measure === 0 ? true : cur !== prev;
+      return {
+        ...state,
+        song: [...newTime]
+      }
     case SHOW_MEASURE_MODAL:
       return {
         ...state,

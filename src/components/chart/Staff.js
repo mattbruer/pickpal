@@ -26,8 +26,8 @@ const Staff = ({ measureNumber, timeSigSize }) => {
                 {barlines.right}
             </svg>
             <p style={{
-                fontSize: "100%",
-                marginLeft: "40px",
+                fontSize: "2vw",
+                marginLeft: "5vw",
                 marginTop: "3%",
                 marginBottom: "3%"
             }}>{measureNumber + 1}</p>

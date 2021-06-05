@@ -6,8 +6,15 @@ export const START_NEW_SONG = 'START_NEW_SONG';
 export const EDIT_CHORDS = 'EDIT_CHORDS';
 export const ADD_MEASURE = 'ADD_MEASURE'
 export const DELETE_MEASURE = "DELETE_MEASURE";
-export const SHOW_MEASURE_MODAL = 'SHOW_MEASURE_MODAL'
+export const SHOW_MEASURE_MODAL = 'SHOW_MEASURE_MODAL';
+export const EDIT_TIME_SIG = "EDIT_TIME_SIG"
 
+export function editTimeSig(timeSig, measure) {
+  return {
+    type: EDIT_TIME_SIG,
+    payload: { timeSig, measure }
+  }
+}
 export function showMeasureModal(bool, measureNumber) {
   return {
     type: SHOW_MEASURE_MODAL,

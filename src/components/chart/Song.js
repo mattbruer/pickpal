@@ -6,8 +6,9 @@ import { useSelector } from 'react-redux';
 import { renderLines } from '../../helperFunctions/renderLines';
 
 const Song = () => {
-  const { measureModal } = useSelector((state) => state.chart);
+  const { song } = useSelector(state => state.chart)
   const lines = renderLines();
+
   return (
     <div
 
