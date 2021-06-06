@@ -46,7 +46,7 @@ const chartReducer = (state = initialState, action) => {
         }
       }
       const cur = newTime[measure].timeSig.toString();
-      const prev = newTime[measure - 1].timeSig.toString() || ""
+      const prev = newTime[measure - 1]?.timeSig.toString();
       newTime[measure].showTimeSig = measure === 0 ? true : cur !== prev;
       return {
         ...state,
