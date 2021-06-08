@@ -2,7 +2,7 @@ export function renderTimeSig(leftBarline, timeSig, timeSigSize) {
     return (
         <>
 
-            <text style={{ color: "blue", fontSize: `${timeSigSize}vw` }} x={leftBarline === "startRepeat" ? "1vw" : ".3vw"} y="45%">
+            <text style={{ fontSize: `${timeSigSize}vw` }} x={leftBarline === "startRepeat" ? "1vw" : ".3vw"} y="45%">
                 {timeSig[0]}
             </text>
 

@@ -1,0 +1,38 @@
+.measure-container {
+  display: flex;
+  border: 1px solid red;
+
+  flex: 0.25;
+}
+
+.time {
+  display: flex;
+  background-color: khaki;
+  width: 3.5vw;
+  flex-direction: column;
+}
+
+.staffs {
+  display: flex;
+  background-color: violet;
+  flex: 1;
+  flex-direction: column;
+}
+
+.chords {
+  flex: 1;
+  background-color: yellowgreen;
+}
+
+.staff {
+  flex: 3;
+}
+
+.measNum {
+  flex: 1;
+  background-color: lightblue;
+}
+
+.timeSig {
+  flex: 3;
+}

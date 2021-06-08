@@ -15,6 +15,7 @@ const Measure = ({ measureNumber, width, timeSigSize }) => {
       if (editMode && !measureModal) dispatch(showMeasureModal(true, measureNumber))
     }
     } style={{
+      
       width: `${width}%`
 
     }} className="measure" >

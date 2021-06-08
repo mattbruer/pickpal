@@ -1,5 +1,7 @@
 .line {
   display: flex;
-  height: 11vw;
+  /* height:11vw; */
+  height: 19vw;
+  background-color: rosybrown;
   margin-bottom: 3.5vw;
 }
