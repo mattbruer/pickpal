@@ -17,6 +17,7 @@ const Line = ({ measures, lineNumber }) => {
         <Measure measureNumber={index + lineNumber * 4} />  */}
         </>
       ))}
+      
     </div>
   );
 };

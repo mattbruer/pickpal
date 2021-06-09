@@ -1,38 +1,50 @@
 .measure-container {
   display: flex;
-  border: 1px solid red;
 
-  flex: 0.25;
+  flex-grow: 0.25;
+}
+
+.the-rest {
+  width: 100%;
 }
 
 .time {
   display: flex;
-  background-color: khaki;
-  width: 3.5vw;
+
+  width: 2.9vw;
   flex-direction: column;
 }
 
 .staffs {
   display: flex;
-  background-color: violet;
+
   flex: 1;
   flex-direction: column;
 }
 
 .chords {
   flex: 1;
-  background-color: yellowgreen;
 }
 
 .staff {
   flex: 3;
+  display: flex;
 }
 
 .measNum {
   flex: 1;
-  background-color: lightblue;
 }
 
 .timeSig {
   flex: 3;
+}
+
+.sixteenth {
+  width: 6.25%;
+}
+.eighth {
+  width: 12.5%;
+}
+.quarter {
+  width: 25%;
 }
