@@ -1,10 +1,13 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { editTitle } from '../../store/actions/chartActions';
+import NewMelodyModal from '../chart/NewMelodyModal'
 import './header.css';
 
 const Header = () => {
+  const [showModal,setShowModal]=useState(false);
+
   const dispatch = useDispatch();
   const { title, editMode } = useSelector((state) => state.chart);
   return (
@@ -37,7 +40,11 @@ const Header = () => {
           <h1>{title}</h1>
         )}
       </div>
-      <div className="header-right"></div>
+      <div className="header-right">
+        <NewMelodyModal/>
+      </div>
+    
+     
     </div>
   );
 };

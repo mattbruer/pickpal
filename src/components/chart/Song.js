@@ -31,7 +31,7 @@ const Song = () => {
         backgroundColor: 'white',
       }}
     >
-
+ 
       {lines.map((l, i) => (
         <Line measures={renderLines(numbersPerLine)[i]} lineNumber={i} />
       ))}
