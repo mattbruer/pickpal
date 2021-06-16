@@ -13,7 +13,7 @@ const Chart = () => {
       <Header />
       <ScreenTabs/>
       <MeasureEditModal />
-      <Song />
+      {/* <Song /> */}
       <Controls />
     </div>
   );

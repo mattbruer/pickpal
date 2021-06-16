@@ -1,7 +1,7 @@
 import { store } from '../index';
 import Measure from '../components/chart/Measure';
 
-export const renderLines = (measuresPerLine = 4) => {
+export const renderLines = (measuresPerLine = 4,part) => {
   let lines = [];
   let { song } = store.getState().chart;
 

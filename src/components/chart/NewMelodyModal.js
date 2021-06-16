@@ -1,39 +1,25 @@
 import React from 'react'
-import { Button, Header, Image, Modal } from 'semantic-ui-react'
+import { Button, Modal } from 'semantic-ui-react'
+import NewInstSelect from './NewInstSelect'
 
-function ModalExampleModal() {
-  const [open, setOpen] = React.useState(false)
-
+function ModalExampleShorthand() {
   return (
-    <Modal
-      onClose={() => setOpen(false)}
-      onOpen={() => setOpen(true)}
-      open={open}
-      trigger={<Button>+ Add Melody</Button>}
-    >
-      <Modal.Header>Instrument</Modal.Header>
-      <Modal.Content image>
-       
-        <Modal.Description>
-          <Header>Instrument</Header>
-       <input/>
-        </Modal.Description>
-      </Modal.Content>
-      <Modal.Actions>
-          <button>hi</button>
-        <Button color='black' onClick={() => setOpen(false)}>
-          Nope
-        </Button>
-        <Button
-          content="Yep, that's me"
-          labelPosition='right'
-          icon='plus'
-          onClick={() => setOpen(false)}
-          positive
-        />
-      </Modal.Actions>
-    </Modal>
+            <Modal
+                style={{position:"relative", top:'0',left:"0", height:"40%",width:"70%"}}
+                trigger={<Button>+ New Part</Button>}
+                
+                content=
+                {
+                <div style={{display:"flex",height:"50%"}}>
+                   
+                 <NewInstSelect/>
+                </div>
+                }
+                actions={['Cancel', { key: 'done', content: 'Create', disabled:true,positive: true, onClick:()=>{alert("create")} }]}
+            />
+     
+  
   )
 }
 
-export default ModalExampleModal
+export default ModalExampleShorthand

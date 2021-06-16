@@ -41,7 +41,7 @@ const Header = () => {
         )}
       </div>
       <div className="header-right">
-        <NewMelodyModal/>
+        <NewMelodyModal style={{width:"70px"}}/>
       </div>
     
      

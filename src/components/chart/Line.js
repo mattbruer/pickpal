@@ -5,14 +5,15 @@ import './Line.css';
 import TimeSig from './TimeSig';
 import Measure2 from './Measure2'
 
-const Line = ({ measures, lineNumber }) => {
+const Line = ({ measures, lineNumber, part }) => {
 
 
   return (
     <div className="line">
       {measures.map((m, index) => (
         <>
-        <Measure2/>
+        
+        <Measure2 part={part}/>
         {/* <TimeSig/>
         <Measure measureNumber={index + lineNumber * 4} />  */}
         </>
